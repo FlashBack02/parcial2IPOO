@@ -46,6 +46,13 @@ echo $torneo->ingresarPartido($objE11, $objE11, '2024-05-23', 'basquetbol');
 echo $torneo->ingresarPartido($objE9, $objE10, '2024-05-25', 'basquetbol');
 
 // Visualizar los equipos ganadores
+echo "Ganadores de basquetbol: " . print_r($torneo->darGanadores('basquet'), true);
+echo "Ganadores de futbol: " . print_r($torneo->darGanadores('futbol'), true);
+
+// Calcular premio por partido
+echo "Premio del partido 1: " . print_r($torneo->calcularPremioPartido($partido1), true);
+echo "Premio del partido 2: " . print_r($torneo->calcularPremioPartido($partido2), true);
+echo "Premio del partido 3: " . print_r($torneo->calcularPremioPartido($partido3), true);
 
 // Echo del objeto Torneo
 echo $torneo;
